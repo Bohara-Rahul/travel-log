@@ -5,12 +5,13 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
-
   vite: {
     plugins: [
       tailwindcss(),
     ],
   },
-
-  modules: ['@nuxt/icon'],
+  modules: ['@nuxt/icon', '@nuxtjs/color-mode'],
+  colorMode: {
+    dataValue: "theme"
+  }
 })
