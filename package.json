@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@nuxt/icon": "1.15.0",
+    "@nuxtjs/color-mode": "3.5.2",
     "@tailwindcss/vite": "^4.1.11",
     "nuxt": "^3.17.6",
     "tailwindcss": "^4.1.11",
@@ -19,6 +20,7 @@
   },
   "packageManager": "pnpm@10.12.4+sha512.5ea8b0deed94ed68691c9bad4c955492705c5eeb8a87ef86bc62c74a26b037b08ff9570f108b2e4dbd1dd1a9186fea925e527f141c648e85af45631074680184",
   "devDependencies": {
+    "@iconify-json/tabler": "^1.2.19",
     "daisyui": "^5.0.46"
   }
 }
