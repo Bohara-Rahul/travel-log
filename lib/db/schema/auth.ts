@@ -1,8 +1,9 @@
 import { sqliteTable, text, integer, int } from "drizzle-orm/sqlite-core";
 
 export const user = sqliteTable("user", {
-					id: int().primaryKey({ autoIncrement: true }),
-					name: text().notNull(),
+
+ id: int().primaryKey({ autoIncrement: true }),
+ name: text().notNull(),
  email: text().notNull().unique(),
  emailVerified: integer({ mode: 'boolean' }).$defaultFn(() => false).notNull(),
  image: text('image'),
@@ -11,8 +12,8 @@ export const user = sqliteTable("user", {
 				});
 
 export const session = sqliteTable("session", {
-					id: int().primaryKey({ autoIncrement: true }),
-					expiresAt: integer().notNull(),
+ id: int().primaryKey({ autoIncrement: true }),
+ expiresAt: integer().notNull(),
  token: text().notNull().unique(),
  createdAt: integer().notNull(),
  updatedAt: integer().notNull(),
@@ -22,8 +23,8 @@ export const session = sqliteTable("session", {
 				});
 
 export const account = sqliteTable("account", {
-					id: int().primaryKey({ autoIncrement: true }),
-					accountId: text().notNull(),
+ id: int().primaryKey({ autoIncrement: true }),
+ accountId: text().notNull(),
  providerId: text().notNull(),
  userId: text().notNull().references(()=> user.id, { onDelete: 'cascade' }),
  accessToken: text(),
@@ -38,10 +39,11 @@ export const account = sqliteTable("account", {
 				});
 
 export const verification = sqliteTable("verification", {
-					id: int().primaryKey({ autoIncrement: true }),
-					identifier: text('identifier').notNull(),
+ id: int().primaryKey({ autoIncrement: true }),
+ identifier: text('identifier').notNull(),
  value: text('value').notNull(),
  expiresAt: integer().notNull(),
  createdAt: integer(),
  updatedAt: integer()
 				});
+
