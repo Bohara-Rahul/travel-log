@@ -12,7 +12,7 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
-  modules: ['@nuxt/icon', '@nuxtjs/color-mode'],
+  modules: ['@nuxt/icon', '@nuxtjs/color-mode', '@pinia/nuxt'],
   colorMode: {
     dataValue: "theme"
   }

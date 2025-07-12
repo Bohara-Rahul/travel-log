@@ -7,9 +7,7 @@
     </div>
     <div class="navbar-end">
       <AppColorSwitcher />
-      <NuxtLink class="btn btn-accent">Sign In with github 
-        <Icon name="tabler:brand-github" size="24"/>
-      </NuxtLink>
+      <AuthButton />
     </div>
   </div>
 </template>
